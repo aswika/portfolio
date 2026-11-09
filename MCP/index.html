@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Scoping the First Release of an MCP · Aswika Manivannan</title>
+<meta name="description" content="Interviews with recruiters who built their own AI integrations, used to choose where an official one should start.">
+<meta property="og:title" content="Scoping the First Release of an MCP"><meta property="og:description" content="Interviews with recruiters who built their own AI integrations, used to choose where an official one should start.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../styles.css">
+</head><body>
+<nav class="site-nav"><a class="name" href="../">Aswika M</a><div class="links"><a href="../#work">Work</a><a href="../#how">How I work</a><a href="../#about">About</a></div></nav>
+<main>
+<div class="label">Case study · Employ · Jun–Jul 2026</div>
+<h1>Scoping the First Release of an MCP</h1>
+<p>Recruiters were already weaving AI assistants into their daily work. Some of our customers had gone further and built their own MCPs between an AI assistant and our applicant tracking system. The team was considering building an official integration and needed to know where to start. I talked to the recruiters who had built their own to learn what pushed them to build, and what they'd want from one we made.</p>
+<div class="meta">
+ <div><span class="label">Role</span><span>Product Researcher</span></div>
+ <div><span class="label">Timeline</span><span>Jun–Jul 2026</span></div>
+ <div><span class="label">Method</span><span>Generative interviews with a consistent five-theme framework</span></div>
+ <div><span class="label">Deliverable</span><span>Readout deck and a workflow map of AI use cases</span></div>
+</div>
+<div class="fig wide-fig">
+ <div class="funnel" style="grid-template-columns:repeat(3,1fr)">
+  <div><b>6</b>recruiters at companies that had built their own AI integration or expressed the need for an MCP</div>
+  <div><b>3</b>kinds of barrier to adoption: trust, compliance, cost</div>
+  <div><b>2</b>priorities: reporting, and the hiring-manager experience</div>
+ </div>
+ <div class="figcap">Figure 1. The study at a glance.</div>
+</div>
+
+<h2>At a glance</h2>
+<p><strong>Problem.</strong> The team wanted to build an AI integration for recruiters but didn't know what capabilities to prioritize for an initial release.</p>
+<p><strong>What I did.</strong> Interviewed recruiters whose teams had built or bought their own AI solutions, or had asked our account managers about an MCP release. The goal was to understand which stages and tasks recruiters currently use AI for, and what gives them the highest return.</p>
+<p><strong>Outcome.</strong> The team focused on the hiring-manager experience and reporting. The research showed where recruiters were comfortable using AI, where they wanted it enough to build or buy it themselves, and what they wanted AI to do more of in their workflow.</p>
+
+<h2>Research question</h2>
+<p class="q">Where should we start when building an AI integration for recruiters?</p>
+<ul>
+<li>What AI use cases do recruiters already rely on across the hiring workflow?</li>
+<li>Which areas should the integration prioritize?</li>
+<li>What concerns do they have about using AI in their workflow, and where do they not want AI involved?</li>
+</ul>
+
+<h2>Approach</h2>
+<p>One-on-one interviews with six recruiters from five customer companies, across industries from localization to retail. Every session followed the same five themes, so the answers could be compared side by side.</p>
+<div class="fig wide-fig">
+ <div class="five">
+  <div><b>Workflow pains</b>Where the day goes and what slows it down</div>
+  <div><b>AI use today</b>What they use AI for, stage by stage</div>
+  <div><b>Barriers</b>What stops them using more</div>
+  <div><b>Wishlist</b>What they wish AI could do</div>
+  <div><b>Integration use cases</b>What an official integration should handle</div>
+ </div>
+ <div class="figcap">Figure 2. The five-theme interview framework.</div>
+</div>
+
+<h2>Decisions that shaped the study</h2>
+<h3>Talk to the people already building</h3>
+<p>Talking to recruiters who had built their own integration helped us learn what they wanted the tool to do, what their solutions were doing well, and where they could be improved.</p>
+<h3>Separate what's in use from what's wished for</h3>
+<p>For every stage I recorded what recruiters actually do with AI today separately from what they'd like it to do.</p>
+<h3>Tie AI value to known product gaps</h3>
+<p>Many use cases filled gaps recruiters already complained about, like reporting and finding candidates in the pipeline. Linking the two showed the integration could fix existing pain, not just add something new.</p>
+<h3>Raise the blockers before the build</h3>
+<p>Some companies only allow approved tools, and candidate notes are protected data. I flagged these early so the team could plan for them accordingly.</p>
+
+<h2>What we learned</h2>
+<p><strong>AI use is uneven across the workflow.</strong> Recruiters lean on AI heavily for writing and interviews, and barely at all for scheduling and offers.</p>
+<div class="fig wide-fig">
+ <div class="tablewrap"><table class="map">
+  <tr><th>Stage</th><th>Using AI today</th><th>Want AI to do</th></tr>
+  <tr><td>Intake and job posting</td><td><span class="lvl hi">Heavy</span> Transcribe intake calls, draft job descriptions, build candidate profiles</td><td>Write job descriptions without switching tools</td></tr>
+  <tr><td>Screening and sourcing</td><td><span class="lvl hi">Heavy</span> Match and tag applicants, flag likely fraud, generate search strings</td><td>Ranked shortlists with a fit summary; filter fake applications</td></tr>
+  <tr><td>Pipeline</td><td><span class="lvl mid">Some</span> Find duplicate candidates, build dynamic lists</td><td>Automatic duplicate detection, drafted replies</td></tr>
+  <tr><td>Scheduling</td><td><span class="lvl lo">None</span></td><td>Sync outside booking links</td></tr>
+  <tr><td>Interviews</td><td><span class="lvl hi">Heavy</span> Interview scripts, transcription, auto-filled scorecards, chasing feedback</td><td>Candidate briefs for hiring managers; feedback from chat or email</td></tr>
+  <tr><td>Reporting</td><td><span class="lvl mid">Some</span> Answer pipeline questions, pull stage history</td><td>Recruiter performance, time to fill, likelihood a role fills</td></tr>
+  <tr><td>Offers</td><td><span class="lvl lo">Little</span> Refine offer templates</td><td>Nothing yet</td></tr>
+  <tr><td>Support</td><td><span class="lvl lo">None</span></td><td>Troubleshoot their own setup</td></tr>
+ </table></div>
+ <div class="figcap">Figure 3. How recruiters use AI across the hiring workflow, simplified from the full map.</div>
+</div>
+<p><strong>Two pains stood out.</strong> Both came up across companies, and both are places where an integration could do work recruiters were already doing by hand.</p>
+<div class="fig wide-fig">
+ <div class="prio">
+  <div><span>Priority 1</span><b>Reporting is limited</b><ul><li>Reporting happens entirely outside the product, in spreadsheets and BI tools.</li><li>Even basic counts mean filing a support ticket.</li><li>Historical and predictive questions take heavy manual digging.</li></ul></div>
+  <div><span>Priority 2</span><b>The hiring-manager experience</b><ul><li>Feedback arrives late and thin, often just pass or fail.</li><li>Hiring managers skip candidate notes and can't see the pipeline without help.</li><li>Scheduling turns into back-and-forth.</li></ul></div>
+ </div>
+ <div class="figcap">Figure 4. The two priorities the research recommended.</div>
+</div>
+<p><strong>Recruiters want it built in, but trust has to be earned.</strong> An official integration would end the copy-paste between tools. But recruiters distrusted community-built code, had seen AI get facts wrong, and were uneasy sending candidates AI-written messages. Some companies also only allow approved tools, and others doubted the cost was worth it.</p>
+
+<h2>Conclusion</h2>
+<p>The research turned an open question, "where do we start?", into a ranked answer. The team focused on the hiring-manager experience and reporting. The findings also echoed my churn research, where reporting was one of the most painful areas for customers. A separate method, with a different group of customers, pointed at the same problem.</p>
+
+<h2>How confident to be</h2>
+<dl>
+<dt>Early adopters, by design.</dt><dd>Everyone had built their own integration, so they're more AI-forward than a typical recruiter. That made them the right people for "where to start", but their comfort with AI won't hold for every customer.</dd>
+<dt>Wishes are not commitments.</dt><dd>The wishlist shows interest, not proof recruiters would use each feature.</dd>
+</dl>
+
+<h2>What I'd do next</h2>
+<ul>
+<li><strong>Test the hiring-manager concepts</strong> with hiring managers themselves, not only recruiters.</li>
+<li><strong>Work through compliance with security early,</strong> so approved-tools-only customers can adopt it.</li>
+<li><strong>Check the effect on support load.</strong> If reporting through the integration works, basic report requests to Support should drop.</li>
+</ul>
+</main>
+<nav class="next" aria-label="More case studies"><a href="../talent-network.html"><span class="label">Previous</span><span>Testing Product Market Fit with a New Audience</span></a><a class="r" href="../"><span class="label">Back</span><span>All work</span></a></nav>
+<footer class="site-foot">© 2026 Aswika Manivannan. Customer names are removed and figures are generalized.</footer>
+</body></html>

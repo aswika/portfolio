@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Churn Reduction Roadmap Guided by VoC Analysis · Aswika Manivannan</title>
+<meta name="description" content="How I turned thousands of support conversations into a roadmap shortlist PMs use to prioritize churn fixes.">
+<meta property="og:title" content="Churn Reduction Roadmap Guided by VoC Analysis"><meta property="og:description" content="How I turned thousands of support conversations into a roadmap shortlist PMs use to prioritize churn fixes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<nav class="site-nav"><a class="name" href="./">Aswika M</a><div class="links"><a href="./#work">Work</a><a href="./#how">How I work</a><a href="./#about">About</a></div></nav>
+<main>
+<div class="label">Case study · Employ · Oct 2026</div>
+<h1>Churn Reduction Roadmap Guided by VoC Analysis</h1>
+<p>We needed data to inform which churn issues to prioritize, fast. Customers were already telling Support and their account managers what was wrong, so we decided to lean on this data to get results by the following week, when they were needed. Based on the product areas we were told to focus on, we delivered an interactive artifact that broke down key issues, so PMs could shortlist issues into a potential roadmap plan for their area.</p>
+<div class="meta">
+ <div><span class="label">Role</span><span>Product Researcher</span></div>
+ <div><span class="label">Timeline</span><span>Analysis in one week; shared with product leads Nov 2026</span></div>
+ <div><span class="label">Method</span><span>Desk research: AI-assisted, multi-label theme analysis</span></div>
+ <div><span class="label">Deliverable</span><span>Interactive roadmap shortlist</span></div>
+</div>
+<div class="fig wide-fig">
+ <div class="funnel">
+  <div><b>10,000</b>rows of customer communication data, cleaned and themed</div>
+  <div><b>4</b>product areas: reporting, scheduling, workflow &amp; AI, integrations</div>
+  <div><b>1</b>Claude skill that saved days of manual work and can be reused on future data for consistency</div>
+  <div><b>1</b>interactive report PMs use in roadmap planning</div>
+ </div>
+ <div class="figcap">Figure 1. The study at a glance.</div>
+</div>
+
+<h2>At a glance</h2>
+<p><strong>Problem.</strong> Customers were leaving, and product teams were given churn focus areas without knowing the specific issues causing churn within each area.</p>
+<p><strong>What I did.</strong> Designed a repeatable theming method, built it as a Claude skill, and ran it across four areas of support data.</p>
+<p><strong>Outcome.</strong> Gave PMs insight into specific, actionable issues for their product areas. It will be used to decide roadmap priorities and to raise awareness of system issues that engineering teams can tackle.</p>
+
+<h2>Research question</h2>
+<p class="q">What specific issues are customers raising about reporting, scheduling, and workflow and AI automation?</p>
+
+<h2>Approach</h2>
+<p>Each area was exported from Salesforce and analyzed separately with the same four-step process. I built the process as a reusable Claude skill, so it runs the same way every time and can be rerun on a new export.</p>
+<div class="fig wide-fig">
+ <div class="steps">
+  <div><span>Step 1</span><b>Trim and de-duplicate</b><ul class="sb"><li>Remove any duplicates.</li><li>Trim the communication data to only relevant information. Some data came from calls where several topics were discussed.</li><li>This sets up later steps so agents read less data, which lowers the risk of AI misclassifying records or wasting tokens re-reading long text full of unneeded detail.</li></ul></div>
+  <div><span>Step 2</span><b>Approve the themes</b><ul class="sb"><li>Suggest categories or themes based on a sample of the data.</li><li>I review them by hand to make sure the groupings make sense, and that no areas are missing or need to be broken down further.</li></ul></div>
+  <div><span>Step 3</span><b>Tag with evidence</b>Tag every record against every theme it raises. Each tag carries a verbatim quote from the record, so the work is easy to verify and trace back.</div>
+  <div><span>Step 4</span><b>Count two ways</b><ul class="sb"><li>Count mentions, to understand how often a theme or subtheme came up.</li><li>Count unique accounts per theme or subtheme, to understand how much of our customer base is affected, and to make sure the same customers aren't inflating the numbers.</li></ul></div>
+ </div>
+ <div class="figcap">Figure 2. The four-step method, run separately on each area.</div>
+</div>
+
+<h2>Decisions that shaped the study</h2>
+<h3>Rank by accounts, not mentions</h3>
+<p>One frustrated customer can file a dozen tickets about the same bug. Counting unique accounts keeps theme sizes from being inflated by a few loud customers, and accounts are the unit that churns.</p>
+<div class="fig wide-fig">
+ <div class="acct">
+  <div class="label" style="margin-bottom:5pt">Example: complaints that reporting data is stale or delayed</div>
+  <div class="r"><span>Account A</span><span><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+  <div class="r"><span>Account B</span><span><i></i></span></div>
+  <div class="r"><span>Account C</span><span><i></i></span></div>
+  <div class="t"><b>14</b> mentions &nbsp;&nbsp; <b>3</b> accounts affected</div>
+ </div>
+ <div class="figcap">Figure 3. Illustrative. Ranked by mentions, Account A's problem looks biggest. Ranked by accounts, a problem raised once each by many customers rises above it.</div>
+</div>
+<h3>A human approves the themes first</h3>
+<p>The model proposed themes, but tagging only started once I had reviewed and approved the set. That kept the categories meaningful to product teams.</p>
+<h3>No tag without a quote</h3>
+<p>Every tag links to the customer's own words. Any PM can check why a record was counted, which makes the numbers easier to trust and to challenge.</p>
+<h3>Design for the decision</h3>
+<p>I shipped a working tool PMs could use to prioritize without research in the room, not a readout deck. I rolled it out to product leads first, then to PMs.</p>
+
+<h2>The shortlist tool</h2>
+<p>PMs get one tab per product area. They can rank subthemes by mentions or by unique accounts, hide non-product themes, star the subthemes they want to pursue, and copy their shortlist into a roadmap planning doc.</p>
+<div class="fig wide-fig">
+ <img class="still" src="assets/churn-tool.png" alt="The shortlist tool as delivered, Reporting tab, counts redacted">
+ <video class="video" src="assets/churn-tool-walkthrough.mp4" poster="assets/churn-tool-poster.jpg" controls muted playsinline loop preload="metadata" aria-label="Walkthrough of a recreation of the shortlist tool"></video><div class="figcap">Walkthrough of a recreation of the tool, with generalized values: picking themes, switching tabs, sizing by mentions then unique accounts, hiding non-product themes, and copying a shortlist for the roadmap.</div>
+ <div class="figcap">Figure 4. The shortlist tool as delivered to PMs (Reporting tab). Account and mention counts are redacted.</div>
+</div>
+
+<h2>Conclusion</h2>
+<p>The findings of this analysis lined up with research I had done before. The year prior, I ran a survey built on an importance-satisfaction matrix to find churn areas, and it highlighted similar issues. Reporting, for example, was a high-priority area that was painful to use in our product.</p>
+<p>This new analysis showed which issues may be less common now because of feature releases over the year, and which ones have yet to be addressed.</p>
+
+<h2>How confident to be</h2>
+<dl>
+<dt>Tagging was model-assisted.</dt><dd>Tags came from a model working against an approved theme set with quotes as evidence, not from manual coding. Counts are a strong guide, not exact figures. Borderline calls sit mostly in the vaguer subthemes.</dd>
+<dt>The sample is people who contacted Support.</dt><dd>It over-represents breakages and under-represents problems customers have stopped reporting. It shows what customers report, not how often a problem happens.</dd>
+<dt>Areas aren't comparable to each other.</dt><dd>Each export was filtered for its own topic, so record counts can't be compared across tabs.</dd>
+</dl>
+
+<h2>What I'd do next</h2>
+<ul>
+<li><strong>Trace the impact.</strong> Track which starred subthemes become engineering tickets or roadmap items.</li>
+<li><strong>Check the scale with usage data.</strong> For the top reliability themes, such as calendar sync and stale report data, confirm with incident or usage data how often the problem actually happens.</li>
+<li><strong>Rerun it.</strong> Because the method is a skill, the same analysis can run on a future export to track change over time, or on our company's other two products.</li>
+</ul>
+</main>
+<nav class="next" aria-label="More case studies"><a href="./"><span class="label">Back</span><span>All work</span></a><a class="r" href="candidate-fraud.html"><span class="label">Next</span><span>Defining the MVP for Candidate Fraud Detection</span></a></nav>
+<footer class="site-foot">© 2026 Aswika Manivannan. Customer names are removed and figures are generalized.</footer>
+</body></html>

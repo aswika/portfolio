@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Defining the MVP for Candidate Fraud Detection · Aswika Manivannan</title>
+<meta name="description" content="How interviews and an iterating prototype decided which fraud signals shipped in the MVP.">
+<meta property="og:title" content="Defining the MVP for Candidate Fraud Detection"><meta property="og:description" content="How interviews and an iterating prototype decided which fraud signals shipped in the MVP.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<nav class="site-nav"><a class="name" href="./">Aswika M</a><div class="links"><a href="./#work">Work</a><a href="./#how">How I work</a><a href="./#about">About</a></div></nav>
+<main>
+<div class="label">Case study · Employ · Oct–Nov 2025</div>
+<h1>Defining the MVP for Candidate Fraud Detection</h1>
+<p>Recruiters were seeing more fake candidates: stolen identities, AI-written resumes, and someone else showing up to the interview. Our products had no automated way to check whether a candidate was real, so recruiters were verifying applicants by hand. The team had a prototype of a fraud companion MVP and needed to know which fraud signals were worth having in the MVP.</p>
+<div class="meta">
+ <div><span class="label">Role</span><span>Product Researcher</span></div>
+ <div><span class="label">Timeline</span><span>Oct–Nov 2025</span></div>
+ <div><span class="label">Method</span><span>Generative interviews (critical incident technique) plus a concept test</span></div>
+ <div><span class="label">Deliverable</span><span>Research plan, report and share-out</span></div>
+</div>
+<div class="fig wide-fig">
+ <div class="funnel" style="grid-template-columns:repeat(3,1fr)">
+  <div><b>5</b>customers, most with direct experience of a fraudulent candidate</div>
+  <div><b>2</b>parts per session:<br>· a walkthrough of their current process<br>· reactions to the prototype</div>
+  <div><b>1</b>MVP signal set, plus the signals to cut or defer</div>
+ </div>
+ <div class="figcap">Figure 1. The study at a glance.</div>
+</div>
+
+<h2>At a glance</h2>
+<p><strong>Problem.</strong> Recruiters were spending time verifying candidates by hand, and the team didn't know which fraud signals were meaningful and how they fit into their current workflows.</p>
+<p><strong>What I did.</strong> Interviewed recruiters about real fraud cases they had handled, then walked them through a prototype of fraud signals and sorted each signal into keep, defer or cut.</p>
+<p><strong>Outcome.</strong> Decided which signals shipped in the MVP, and which ones recruiters didn't care about as much.</p>
+
+<h2>Research questions</h2>
+<p class="q">How do recruiters check whether a candidate is real today, and which fraud signals would help them most?</p>
+<ul>
+<li>What red flags suggest a candidate is fake or a bot?</li>
+<li>How do recruiters confirm their suspicions today?</li>
+<li>What are their biggest pain points with fake applicants?</li>
+<li>Is the proposed prototype valuable, and how does it compare with their current process?</li>
+</ul>
+
+<h2>Approach</h2>
+<p>One-hour, one-on-one sessions with 5 recruiters from five companies. Each session had two parts.</p>
+<div class="fig wide-fig">
+ <div class="parts">
+  <div><span>Part 1</span><b>Current experience</b>Using the critical incident technique, participants walked through a real time they suspected or caught a fake candidate: what tipped them off, how they checked, and what happened next.</div>
+  <div><span>Part 2</span><b>Concept feedback</b>Participants reacted to a prototype showing fraud signals on a candidate. For each signal: would they use it, trust it, and act on it?</div>
+ </div>
+ <div class="figcap">Figure 2. Session structure.</div>
+</div>
+<p>The prototype changed as the study went on. After each interview, we updated the signals based on feedback and showed the new version to the next participant.</p>
+<div class="fig wide-fig">
+ <div class="iter">
+  <div><img src="assets/fraud/prototype-v1.png" alt="First version of the fraud-signal prototype"><b>Version 1</b></div>
+  <div><img src="assets/fraud/prototype-final.png" alt="Final version of the fraud-signal prototype with added and removed signals outlined"><b>Final version</b><br>Added email age, geolocation, application source, AI-written share and a plagiarism check. Removed the past-employer cross-check.</div>
+ </div>
+ <div class="figcap">Figure 3. The prototype before and after the interviews. Candidate details are placeholders; changes are outlined in purple.</div>
+</div>
+
+<h2>Decisions that shaped the study</h2>
+<h3>Recruit people who had seen fraud</h3>
+<p>Most participating companies had direct experience with a fraudulent candidate. They could judge the signals against real cases instead of guessing.</p>
+<h3>Learn and test in the same session</h3>
+<p>Part 1 gave participants their own process as a reference point. When they saw the prototype in Part 2, they compared each signal with what they already do, which made their feedback concrete.</p>
+<h3>End with a decision, not a list of reactions</h3>
+<p>I sorted every signal into keep, defer or cut, with the reason, so the team could scope the MVP directly from the findings.</p>
+
+<h2>What we learned</h2>
+<p><strong>Recruiters draw a clear line.</strong> Using AI to polish a resume is fine. Using AI or another person to pretend to be someone you're not is fraud.</p>
+<p><strong>Fraud shows up at every stage,</strong> so recruiters check at every stage. They rely on manual checks and gut feel built from experience, and they know they still miss things.</p>
+<div class="fig wide-fig">
+ <div class="stages">
+  <div><span>Stage 1</span><b>Application</b>Spikes in volume. Minimize fraud by limiting easy-apply or closing postings early</div>
+  <div><span>Stage 2</span><b>Resume screen</b>Fraud signals: fake contact info, duplicate applications, "too good to be true" resumes</div>
+  <div><span>Stage 3</span><b>Recruiter interview</b>Fraud prevention: camera on, no VPN. Fraud signals: reading off-screen, answers that fall apart on follow-up</div>
+  <div><span>Stage 4</span><b>HM interview and assessment</b>Same vigilance; some assessment tools verify ID</div>
+  <div><span>Stage 5</span><b>Offer and day one</b>Is the person who starts the person who interviewed?</div>
+ </div>
+ <div class="figcap">Figure 4. Where recruiters look for fraud today. Simplified from the full workflow map.</div>
+</div>
+<p><strong>Recruiters can't size the problem.</strong> Without data on how often fraud happens, it's hard for them to justify a new tool. A fraud companion that flags fake candidates and keeps a record of this data arms recruiting teams with insights to bring to leadership when necessary.</p>
+<p><strong>Signals need to explain themselves.</strong> Recruiters wanted to know why a signal fired and how reliable it is, with benchmarks for what normal looks like and a clear severity level. They expected to double-check the tool until it earned their trust.</p>
+<div class="principle">"We raise the risks, you decide."</div>
+<p>This became the design principle. The tool surfaces risk; the recruiter makes the call.</p>
+
+<h2>What went into the MVP</h2>
+<div class="fig wide-fig">
+ <div class="triage">
+  <div class="keep"><b>Keep for the MVP</b><ul><li>Email address and email age verification</li><li>Number of applications</li><li>Time taken to apply</li><li>IP and geolocation checks</li><li>Plagiarism check</li><li>Share of the resume likely AI-written</li></ul></div>
+  <div class="nice"><b>Defer</b><ul><li>Social profile age and consistency with the resume</li><li>Profile photo reverse-image check</li></ul><p style="margin:4pt 0 0;color:var(--muted)">Useful, but limited by available data.</p></div>
+  <div class="cut"><b>Cut or deprioritize</b><ul><li>Cross-checking past employers</li><li>Employer name checks</li><li>Resume anomaly flags, such as typos</li></ul><p style="margin:4pt 0 0;color:var(--muted)">Unreliable, or wouldn't change what recruiters do.</p></div>
+ </div>
+ <div class="figcap">Figure 5. Signal triage from the concept test.</div>
+</div>
+
+<h2>Conclusion</h2>
+<p>The research turned a long list of possible signals into a focused MVP. It also confirmed the value of the concept: checks at several stages in one place save recruiters from switching between third-party tools and the ATS, and give them more confidence than any single check.</p>
+
+<h2>How confident to be</h2>
+<dl>
+<dt>Reactions to a prototype, not real use.</dt><dd>Participants judged signals they hadn't used on live candidates. How often each signal fires, and how often it's wrong, can only be learned once it ships.</dd>
+<dt>Fraud is hard to count.</dt><dd>Recruiters themselves couldn't say how big the problem is at their company, so the scale is self-reported.</dd>
+</dl>
+
+<h2>What I'd do next</h2>
+<ul>
+<li><strong>Measure the signals in use.</strong> Track how often each one fires and how often recruiters act on it or override it.</li>
+<li><strong>Build the benchmarks recruiters asked for,</strong> so a signal can show what normal looks like.</li>
+</ul>
+</main>
+<nav class="next" aria-label="More case studies"><a href="churn.html"><span class="label">Previous</span><span>Churn Reduction Roadmap Guided by VoC Analysis</span></a><a class="r" href="talent-network.html"><span class="label">Next</span><span>Testing Product Market Fit with a New Audience</span></a></nav>
+<footer class="site-foot">© 2026 Aswika Manivannan. Customer names are removed and figures are generalized.</footer>
+</body></html>
