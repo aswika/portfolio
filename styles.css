@@ -5,11 +5,8 @@
   --display:"Instrument Serif",Georgia,"Times New Roman",serif;
   --body:Inter,"Helvetica Neue",Arial,sans-serif;
   --mono:Inter,"Helvetica Neue",Arial,sans-serif;
-  --read:720px; --wide:920px;
+  --read:720px; --wide:920px; color-scheme:light;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#13121A; --surface:#1C1A24; --ink:#F3EEE7; --muted:#ABA399; --line:#2D2A38;
-  --accent:#B794FF; --soft:#2A2140; --risk:#7C756C; --risksoft:#24212C; --good:#F3EEE7; color-scheme:dark}}
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
